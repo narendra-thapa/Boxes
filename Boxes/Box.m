@@ -10,17 +10,20 @@
 
 @implementation Box
 
--(void)initBoxHeight:(float)inputHeight width:(float)inputWidth andDepth:(float)inputDepth {
-    self.height = inputHeight;
-    self.width = inputWidth;
-    self.depth = inputDepth;
+-(instancetype)initBoxElementsHeight:(float)inputHeight width:(float)inputWidth andDepth:(float)inputDepth
+{
+    self = [super init];
+    if (self) {
+        self.height = inputHeight;
+        self.width = inputWidth;
+        self.depth = inputDepth;
+    }
+    return self;
 }
 
 -(float)boxVolume {
     return (self.height * self.width * self.depth);
-
 }
-
 
 -(void)volumeCompare:(Box *)secondBox{
     if (self.boxVolume > secondBox.boxVolume) {
@@ -31,6 +34,5 @@
          NSLog(@"Both boxes are equal in volume");
     }
 }
-
 
 @end

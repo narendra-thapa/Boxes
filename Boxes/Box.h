@@ -14,11 +14,10 @@
 @property (nonatomic, assign) float width;
 @property (nonatomic, assign) float depth;
 
--(void)initBoxHeight:(float)inputHeight width:(float)inputWidth andDepth:(float)inputDepth;
+-(instancetype)initBoxElementsHeight:(float)inputHeight width:(float)inputWidth andDepth:(float)inputDepth;     // initialize box elements
 
--(float)boxVolume;
+-(float)boxVolume;              // calculates volume of box
 
--(void)volumeCompare:(Box *)secondBox;
-
+-(void)volumeCompare:(Box *)secondBox;      // compares volumes of two box objects
 
 @end
